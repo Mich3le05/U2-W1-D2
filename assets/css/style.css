@@ -1,10 +1,10 @@
 /* IMPOSTAZIONI GENERALI */
 
 body {
-  font-family: Poppins, "Helvetica Neue", sans-serif;
+  font-family: Poppins, 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   padding: 15px;
-  background-image: url("../img/sfondo.png");
+  background-image: url('../img/sfondo.png');
   background-position: center center;
 }
 
@@ -19,7 +19,11 @@ hr {
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,6 +31,8 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -81,7 +87,7 @@ header nav li a:hover {
   color: red;
 }
 header nav li a::before {
-  content: "\22c6\0020";
+  content: '\22c6\0020';
 }
 
 /* MAIN */
@@ -94,6 +100,29 @@ main {
 @media screen and (min-width: 700px) {
   main {
     padding: 2em;
+  }
+}
+
+#left {
+  float: left;
+}
+
+#underline {
+  position: absolute;
+  transform: translate(27px, -39px);
+}
+
+@media screen and (min-width: 1100px) {
+  #underline {
+    right: 136px;
+    transform: translate(27px, -48px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #underline {
+    right: 428px;
+    transform: translate(27px, -48px);
   }
 }
 
@@ -112,6 +141,8 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  position: absolute;
+  top: -16px;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -313,6 +344,26 @@ aside div {
   padding: 1em;
 }
 
+#art1 {
+  position: relative;
+}
+
+#art2 {
+  position: relative;
+}
+
+#art3 {
+  position: relative;
+}
+
+#tag {
+  color: #cecece;
+  font-size: 65px;
+  position: absolute;
+  right: 13px;
+  top: 10px;
+}
+
 @media screen and (min-width: 1200px) {
   aside div {
     display: inline-block;
@@ -329,7 +380,11 @@ aside div p:last-child {
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
@@ -337,9 +392,111 @@ footer {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 799px) {
+  .footer {
+    position: relative;
+  }
+
+  #up {
+    color: #f0585b;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 20%;
+    background: transparent;
+    position: absolute;
+    right: 49px;
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff44;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(74%, 98%);
+  }
+
+  #alt {
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 20%;
+    background: transparent;
+    position: absolute;
+    right: 49px;
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff44;
+    backdrop-filter: blur(8px);
+    right: -45px;
+    top: 45px;
+  }
+
+  #plus {
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 20%;
+    background: transparent;
+    position: absolute;
+    right: 49px;
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff44;
+    backdrop-filter: blur(8px);
+    right: -45px;
+    top: -25px;
+  }
+}
+
 @media screen and (min-width: 800px) {
-  footer {
-    padding: 1em 12em;
+  .footer {
+    position: relative;
+  }
+
+  #up {
+    color: #f0585b;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 20%;
+    background: transparent;
+    position: absolute;
+    right: 49px;
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff44;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(74%, 98%);
+  }
+
+  #alt {
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 20%;
+    background: transparent;
+    position: fixed;
+    right: 49px;
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff44;
+    backdrop-filter: blur(8px);
+    right: -15px;
+    top: 64px;
+  }
+
+  #plus {
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 20%;
+    background: transparent;
+    position: fixed;
+    right: 49px;
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff44;
+    backdrop-filter: blur(8px);
+    right: -15px;
+    top: 12px;
   }
 }
 
